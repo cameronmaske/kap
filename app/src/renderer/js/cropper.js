@@ -38,9 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'Enter':
         ipcRenderer.send('start-recording');
+        window.removeEventListener('keyup', keyUp, false);
+        window.removeEventListener('keydown', keyUp, false);
         break;
       case ' ':
         ipcRenderer.send('start-recording');
+        window.removeEventListener('keyup', keyUp, false);
+        window.removeEventListener('keydown', keyUp, false);
         break;
       default:
         break;

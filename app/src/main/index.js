@@ -220,7 +220,7 @@ function getCropperWindow() {
 }
 
 app.on('ready', () => {
-  globalShortcut.register('Cmd+Shift+5', () => {
+  globalShortcut.register('Cmd+Shift+2', () => {
     const recording = (appState === 'recording');
     mainWindow.webContents.send((recording) ? 'stop-recording' : 'prepare-recording');
   });
